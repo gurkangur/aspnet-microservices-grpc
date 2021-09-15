@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+
+package Catalog;
+
+message CatalogItemRequest {
+	int32 id = 1;
+}
+
+message CatalogItemResponse {
+	int32 id = 1;
+	string name = 2;
+}
+
+
+
+service Catalog {
+  rpc GetItemById (CatalogItemRequest) returns (CatalogItemResponse) {}
+}
